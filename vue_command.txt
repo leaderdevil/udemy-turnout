@@ -1,0 +1,21 @@
+Command Format
+<input>
+
+- Install vue-cli
+npm install -g vue-cli
+
+- Install vue
+npm install -g vue
+
+- Initialize Project
+vue init webpack-simple <project-name>
+
+- Initialize Node's Module
+cd <project-name>/
+npm install
+
+- Install libraries for management and authentication : Vue-X and Firebase
+npm install vue-router vuex firebase --save
+
+- Run project on the browser
+npm run dev
