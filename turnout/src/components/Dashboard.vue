@@ -2,12 +2,16 @@
 <div class="">
     <h3>Event Dashboard</h3>
     <button class="btn btn-danger btn-sm signout-btn" @click="signOut">Sign Out</button>
-    {{$store.state}}
+    <!-- {{$store.state}} -->
+    <hr>
+<AddEvent />
+    <hr>
 </div>
 </template>
 
 <script>
     import { firebaseApp } from '../firebaseApp'
+    import AddEvent from './AddEvent.vue'
 
     export default {
         methods: {
@@ -15,6 +19,9 @@
                 this.$store.dispatch('signOut')
                 firebaseApp.auth().signOut()
             }
+        },
+        components: {
+            AddEvent
         }
     }
 </script>
