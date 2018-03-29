@@ -9,12 +9,14 @@ import store from './store'
 
 import Dashboard from './components/Dashboard.vue'
 import Signin from './components/Signin.vue'
+import Signup from './components/Signup.vue'
 
 const router = new VueRouter( {
     mode: 'history',
     routes: [
         { path: '/dashboard', component: Dashboard},
-        { path: '/signin', component: Signin}
+        { path: '/signin', component: Signin},
+        { path: '/signup', component: Signup}
     ]
 })
 
@@ -24,6 +26,7 @@ firebaseApp.auth().onAuthStateChanged(user => {
         router.push('/dashboard')   // push = Create stack history
     } else {
         router.replace('/signin')   // replace = Start new stack
+        
     }
 })
 
